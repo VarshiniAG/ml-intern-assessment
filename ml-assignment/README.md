@@ -99,7 +99,7 @@ Create Streamlit UI for interactive text generation
 
 
 
-#Structure
+Structure
 
 ml-assignment/
 
