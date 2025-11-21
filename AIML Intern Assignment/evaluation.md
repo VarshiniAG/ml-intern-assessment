@@ -75,5 +75,4 @@ The goal was to understand and implement **core sequence modeling techniques** u
 **Prepared by:** Varshini A G  
 **GitHub:** [github.com/VarshiniAG](https://github.com/VarshiniAG)
 
-**LinkedIn:** [linkedin.com/in/varshini-ag](https://www.linkedin.com/in/varshini-ag)  
 
