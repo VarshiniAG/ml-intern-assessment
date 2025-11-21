@@ -5,8 +5,8 @@ This directory contains the core implementation files for the Trigram Language M
 ## How to Run 
 
 1 Clone the Repository
-git clone https://github.com/VarshiniAG/ml-intern-assessment.git
-cd ml-intern-assessment
+    git clone https://github.com/VarshiniAG/ml-intern-assessment.git
+    cd ml-intern-assessment
 
 2️ Prepare the Environment
 
