@@ -4,44 +4,41 @@ This directory contains the core implementation files for the Trigram Language M
 
 ## How to Run 
 
-1 Clone the Repository
+# 1 Clone the Repository
 
     git clone https://github.com/VarshiniAG/ml-intern-assessment.git
     cd ml-intern-assessment
 
-2️ Prepare the Environment
+# 2️ Prepare the Environment
 
 Install required dependencies (if any new ones are added later):
 
 
     pip install -r requirements.txt
 
-3️ Run the Trigram Model
+# 3️ Run the Trigram Model
       
     python generate.py
 
-4️ Output
+# 4️ Output
 
     The script will print generated text based on the trained trigram language model.
 
 ## Design Choices
 
-1. Model Selection
+# 1. Model Selection
 
 The project uses a Trigram Language Model, choosing the next word based on the previous two words.
 This method balances contextual understanding and computational simplicity—more informative than bigram models and less complex than full neural language models.
 
-2. Tokenization Strategy
+# 2. Tokenization Strategy
 
-Converted text to lowercase
+  - Converted text to lowercase
+  - Removed punctuation and special characters
+  - Split words into tokens based on whitespace
+  - This ensures a clean and consistent dataset, reducing noise and improving language modeling quality.
 
-Removed punctuation and special characters
-
-Split words into tokens based on whitespace
-
-This ensures a clean and consistent dataset, reducing noise and improving language modeling quality.
-
-3. Data Structure for Trigrams
+# 3. Data Structure for Trigrams
 
        A dictionary of bigram → candidate words mapping was used:
 
@@ -50,31 +47,30 @@ This ensures a clean and consistent dataset, reducing noise and improving langua
 
 This structure allows:
 
-Fast lookup while generating text
-
-Storage of multiple candidate words with equal probability
+  - Fast lookup while generating text
+  - Storage of multiple candidate words with equal probability
 
 4. Text Generation Approach
 
-Started from a random bigram to introduce variability
+    - Started from a random bigram to introduce variability
 
-Iteratively selected the next word using random choice from available candidates
+    - Iteratively selected the next word using random choice from available candidates
 
-Maximum word length is controlled (max_words=20) to prevent infinite loops
+    - Maximum word length is controlled (max_words=20) to prevent infinite loops
 
-This results in realistic yet diverse sentence formation.
+     - This results in realistic yet diverse sentence formation.
 
 5. Edge Case Handling
 
 The model returns:
 
-"" for empty input text
+     "" for empty input text
 
-Original token list if trigrams cannot be formed
+- Original token list if trigrams cannot be formed
 
-Graceful stopping when no continuation exists
+- Graceful stopping when no continuation exists
 
-This improves reliability and prevents runtime errors.
+- This improves reliability and prevents runtime errors.
 
 6. Code Organization
 
@@ -92,13 +88,13 @@ This structure supports maintainability and potential future extensions.
 
 7. Future Improvements
 
-Add smoothing (Laplace smoothing for unseen n-grams)
+- Add smoothing (Laplace smoothing for unseen n-grams)
 
-Add probability-based sampling instead of uniform random selection
+- Add probability-based sampling instead of uniform random selection
 
-Integrate evaluation metrics like perplexity
+- Integrate evaluation metrics like perplexity
 
-Create Streamlit UI for interactive text generation
+- Create Streamlit UI for interactive text generation
 
 
 
