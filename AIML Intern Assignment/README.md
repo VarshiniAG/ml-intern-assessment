@@ -1,10 +1,10 @@
-**AIML Intern Assignment – Scaled Dot-Product Attention & Trigram Language Model**
+# AIML Intern Assignment – Scaled Dot-Product Attention & Trigram Language Model
 
 **Empowering models to focus, understand, and generate sequences with context-awareness.**  
 This project implements **Scaled Dot-Product Attention** and a **Trigram Language Model** from scratch as part of the AIML internship assignment, with emphasis on **modularity, readability, and test-driven development**. Fully compatible with **Google Colab** for seamless experimentation.
 
 
-# Key Highlights
+#Key Highlights
 - Attention Mechanism from Scratch:** Understand and implement the core of transformer architectures.  
 - Trigram Language Model:** Probabilistic text generation based on bigram context.  
 - Test-Driven Development:** All functions validated with **unit tests** to ensure correctness.  
