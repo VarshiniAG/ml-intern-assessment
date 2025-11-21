@@ -1,4 +1,13 @@
 # tests/test_attention.py
+import sys
+import os
+
+# Add src folder to path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
+
+from attention import scaled_dot_product_attention
+from utils import generate_sample_matrices, generate_mask
+import numpy as np
 
 import numpy as np
 from src.attention import scaled_dot_product_attention
