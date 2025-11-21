@@ -5,6 +5,7 @@ This directory contains the core implementation files for the Trigram Language M
 ## How to Run 
 
 1 Clone the Repository
+
     git clone https://github.com/VarshiniAG/ml-intern-assessment.git
     cd ml-intern-assessment
 
@@ -12,14 +13,16 @@ This directory contains the core implementation files for the Trigram Language M
 
 Install required dependencies (if any new ones are added later):
 
-pip install -r requirements.txt
+
+    pip install -r requirements.txt
 
 3️ Run the Trigram Model
-python generate.py
+      
+    python generate.py
 
 4️ Output
 
-The script will print generated text based on the trained trigram language model.
+    The script will print generated text based on the trained trigram language model.
 
 ## Design Choices
 
@@ -40,9 +43,9 @@ This ensures a clean and consistent dataset, reducing noise and improving langua
 
 3. Data Structure for Trigrams
 
-A dictionary of bigram → candidate words mapping was used:
+       A dictionary of bigram → candidate words mapping was used:
 
-trigrams[(word1, word2)] = [possible_next_words]
+       trigrams[(word1, word2)] = [possible_next_words]
 
 
 This structure allows:
@@ -77,13 +80,13 @@ This improves reliability and prevents runtime errors.
 
 The project is modularized into:
 
-trigram_model.py – core logic
+    trigram_model.py – core logic
 
-generate.py – entry script
+    generate.py – entry script
 
-data/ – training corpus
+    data/ – training corpus
 
-utils/ – helper functions (logger, seed setup, text cleaning)
+    utils/ – helper functions (logger, seed setup, text cleaning)
 
 This structure supports maintainability and potential future extensions.
 
@@ -101,41 +104,21 @@ Create Streamlit UI for interactive text generation
 
 Structure
 
-ml-assignment/
+    ml-assignment/
+     │
+     ├── data/
+     │   └── example_corpus.txt
+     │
+     ├── src/
+     │   ├── generate.py
+     │   ├── ngram_model.py
+     │   └── utils.py
+     │
+     ├── tests/
+     │   └── test_ngram.py
+     │
+     ├── README.md
+     ├── evaluation.md
 
-│
 
-├── data/
-
-│   └── example_corpus.txt
-
-│
-
-├── src/
-
-│   ├── generate.py
-
-│   ├── ngram_model.py
-
-│   └── utils.py
-
-│
-
-├── tests/
-
-│   └── test_ngram.py
-
-│
-
-├── README.md
-
-├── evaluation.md
-
-├── assignment.md
-
-├── quick_start.md
-
-├── requirements.txt
-
-└── .gitignore
 
