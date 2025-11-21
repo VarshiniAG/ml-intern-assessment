@@ -82,7 +82,7 @@ Run Attention Example
 Run Unit Tests
 
     !pytest -q
-# - All tests should pass.
+ - All tests should pass.
 
 # Design Insights
 - Causal & Non-Causal Masks: Correct attention in sequential tasks.
