@@ -4,20 +4,20 @@ This directory contains the core implementation files for the Trigram Language M
 
 ## How to Run 
 
- 1️⃣ Clone the Repository
+1 Clone the Repository
 git clone https://github.com/VarshiniAG/ml-intern-assessment.git
 cd ml-intern-assessment
 
-2️⃣ Prepare the Environment
+2️ Prepare the Environment
 
 Install required dependencies (if any new ones are added later):
 
 pip install -r requirements.txt
 
-3️⃣ Run the Trigram Model
+3️ Run the Trigram Model
 python generate.py
 
-4️⃣ Output
+4️ Output
 
 The script will print generated text based on the trained trigram language model.
 
@@ -99,7 +99,7 @@ Create Streamlit UI for interactive text generation
 
 
 
-Structure
+#Structure
 
 ml-assignment/
 
