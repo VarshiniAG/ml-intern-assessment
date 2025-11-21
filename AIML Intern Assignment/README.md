@@ -4,7 +4,7 @@
 This project implements **Scaled Dot-Product Attention** and a **Trigram Language Model** from scratch as part of the AIML internship assignment, with emphasis on **modularity, readability, and test-driven development**. Fully compatible with **Google Colab** for seamless experimentation.
 
 
-# Key Highlights
+## Key Highlights
 - Attention Mechanism from Scratch:** Understand and implement the core of transformer architectures.  
 - Trigram Language Model:** Probabilistic text generation based on bigram context.  
 - Test-Driven Development:** All functions validated with **unit tests** to ensure correctness.  
@@ -12,13 +12,13 @@ This project implements **Scaled Dot-Product Attention** and a **Trigram Languag
 - Colab-Ready:** Run experiments and visualize outputs interactively.
 
 
-# Scaled Dot-Product Attention
+## Scaled Dot-Product Attention
 
-# Concept
+### Concept
 Attention lets a model **focus on relevant input features** when producing outputs.  
 **Scaled Dot-Product Attention** computes attention scores using Queries (Q) and Keys (K), scales them for stability, and applies them to Values (V).
 
-# Formula
+### Formula
 \[
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right) V
 \]
@@ -28,14 +28,14 @@ Attention lets a model **focus on relevant input features** when producing outpu
 - *V:* Value matrix  
 - *dₖ:* Key dimension (for numerical stability)  
 
-# Features
+### Features
 - **Scaling by √dₖ:** Prevents large values in softmax, ensures gradient stability.  
 - **Masking:** Supports **causal masks** for autoregressive tasks and **padding masks** for variable-length sequences.  
 - **Batch Support:** Handles single and batched inputs seamlessly.  
 
 ---
 
-# Project Structure
+## Project Structure
 
       AIML_Intern_Assignment/
            ├── src/
@@ -50,9 +50,9 @@ Attention lets a model **focus on relevant input features** when producing outpu
 
 
 
-# Quick Start
+## Quick Start
 
-# Clone & Navigate
+### Clone & Navigate
 
      !git clone https://github.com/Priya-96-aiml/ml-intern-assessment.git
      %cd "ml-intern-assignment/AIML Intern assignment"
@@ -65,17 +65,17 @@ Run Attention Example
     from src.attention import scaled_dot_product_attention
     from src.utils import create_mask
 
-# Sample matrices
+### Sample matrices
     Q = np.array([[[1, 2], [3, 4]]])
     K = np.array([[[1, 2], [3, 4]]])
     V = np.array([[[1, 2], [3, 4]]])
 
-# Compute attention
+### Compute attention
     output, weights = scaled_dot_product_attention(Q, K, V)
     print("Attention Output:\n", output)
     print("Attention Weights:\n", weights)
 
-# With causal mask
+### With causal mask
     mask = create_mask(Q.shape[1], mode="causal")
     out_masked, weights_masked = scaled_dot_product_attention(Q, K, V, mask=mask)
     print("Attention Output with Causal Mask:\n", out_masked)
@@ -84,7 +84,7 @@ Run Unit Tests
     !pytest -q
  - All tests should pass.
 
-# Design Insights
+## Design Insights
 - Causal & Non-Causal Masks: Correct attention in sequential tasks.
 
 - Numerical Stability: Scaling ensures softmax outputs are well-behaved.
@@ -93,7 +93,7 @@ Run Unit Tests
 
 - Trigram Model: Demonstrates probabilistic sequence generation with context-awareness.
 
-# Learning Outcomes
+## Learning Outcomes
 - Implemented a core transformer component from scratch using Python & NumPy.
 
 - Built robust, testable, and modular code for professional-quality ML projects.
